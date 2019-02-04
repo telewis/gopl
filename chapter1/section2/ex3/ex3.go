@@ -22,6 +22,10 @@ func main() {
 	echo3()
 	fmt.Println(time.Since(start3).Seconds())
 
+	start4 := time.Now()
+	echo4()
+	fmt.Println(time.Since(start4).Seconds())
+
 }
 
 func echo1() {
@@ -44,4 +48,8 @@ func echo2() {
 
 func echo3() {
 	fmt.Println(strings.Join(os.Args[1:], " "))
+}
+
+func echo4() {
+	fmt.Println(os.Args[1:])
 }
